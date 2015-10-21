@@ -18,7 +18,10 @@ import client.PuzzleClient;
 
 public class PuzzleServer extends Thread
 {
+	// use this to hold all the listening ports
 	private ArrayList<Integer> ports = new ArrayList<Integer>();
+	
+	// use this for client connections
 	private static HashMap<SelectionKey, PuzzleClient> clientMap = new HashMap<SelectionKey, PuzzleClient>();
 
 	private ServerSocketChannel ssc;
@@ -70,7 +73,7 @@ public class PuzzleServer extends Thread
 		try
 		{
 			File myFile = new File (filePath);
-			byte [] mybytearray  = new byte [(int)myFile.length()];
+			byte [] mybytearray  = new byte [(int) myFile.length()];
 			fileInputStream = new FileInputStream(myFile);
 			bufferedInputStream = new BufferedInputStream(fileInputStream);
 			bufferedInputStream.read(mybytearray, 0, mybytearray.length);
