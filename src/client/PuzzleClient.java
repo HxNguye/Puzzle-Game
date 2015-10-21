@@ -29,6 +29,7 @@ public class PuzzleClient
 		byteBuffer = ByteBuffer.allocate(1024);
 	}
 	
+	
 	// TODO: Make this usable for multiple socket connections
 //	
 //	/**
