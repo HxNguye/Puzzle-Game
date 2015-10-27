@@ -16,7 +16,7 @@ import client.PuzzleClient;
 public class PuzzleServer extends Thread
 {
 	// use this for client connections
-	private static HashMap<SelectionKey, PuzzleClient> clientMap = new HashMap<SelectionKey, PuzzleClient>();
+	public static HashMap<SelectionKey, PuzzleClient> clientMap = new HashMap<SelectionKey, PuzzleClient>();
 	// get list of ports
 	HashMap<String, Ports> listOfPorts = Ports.getListeningPortsList();
 
